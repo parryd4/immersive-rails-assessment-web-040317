@@ -1,0 +1,9 @@
+<h1>Welcome to The Late Show App</h1>
+<% if session[:username] %>
+  <%= link_to 'See all Episodes', episodes_path  %><br>
+  <%= link_to 'See all Guests', guests_path  %><br>
+  <%= link_to 'Add an Appearance', new_appearance_path  %><br>
+  <%= link_to 'Logout', logout_path, method: 'post' %>
+<% else %>
+<p><%= link_to 'Please log in', login_path %></p>
+<% end %>
